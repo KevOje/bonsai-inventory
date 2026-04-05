@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0d9488;
+  --color-primary-light: #14b8a6;
+  --color-primary-dark: #0f766e;
+  --color-healthy: #10b981;
+  --color-recovering: #f59e0b;
+  --color-sick: #ef4444;
+  --color-dormant: #6b7280;
+  --color-watering: #0ea5e9;
+  --color-fertilizing: #22c55e;
+  --color-repotting: #f59e0b;
+  --color-pruning: #f43f5e;
+  --color-wiring: #8b5cf6;
+  --color-photo-task: #64748b;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #ecfdf5 0%, #e0f2fe 50%, #f0fdfa 100%);
+  background-attachment: fixed;
+  color: #1a1a1a;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+dialog {
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0;
+  max-width: 90vw;
+  max-height: 90vh;
+}
