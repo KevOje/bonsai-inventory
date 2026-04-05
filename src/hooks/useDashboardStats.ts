@@ -38,8 +38,8 @@ export function useDashboardStats() {
     ).length;
 
     // Photo counting would require subcollection queries per bonsai, simplify:
-    const _monthStart = toISODate(startOfMonth(now));
-    const _monthEnd = toISODate(endOfMonth(now));
+    void toISODate(startOfMonth(now));
+    void toISODate(endOfMonth(now));
     const bonsaisWithPhotosNeeded = total;
 
     setStats({

@@ -5,12 +5,11 @@ import { Select } from "../ui/Select";
 import { Textarea } from "../ui/Textarea";
 import { Button } from "../ui/Button";
 import { Tabs } from "../ui/Tabs";
-import { SubstrateMixEditor } from "./SubstrateMixEditor";
 import { createBonsai, updateBonsai } from "../../hooks/useBonsai";
 import type { Bonsai, SubstrateComponent } from "../../types/bonsai";
 import {
   ORIGIN_LABELS, STYLE_LABELS, POT_TYPE_LABELS,
-  HEALTH_LABELS, LOCATION_LABELS, SUN_LABELS,
+  HEALTH_LABELS, SUN_LABELS,
   type Origin, type Style, type PotType, type HealthStatus,
   type Location as Loc, type SunExposure,
 } from "../../types/enums";
@@ -38,7 +37,7 @@ export function BonsaiForm({ initialData }: Props) {
   const [tab, setTab] = useState("basic");
   const [species, setSpecies] = useState(initialData?.species || "");
   const [variety, setVariety] = useState(initialData?.variety || "");
-  const [commonName, setCommonName] = useState(initialData?.commonName || "");
+  const [commonName, _setCommonName] = useState(initialData?.commonName || ""); void _setCommonName;
   const [nickname, setNickname] = useState(initialData?.nickname || "");
   const [estimatedAge, setEstimatedAge] = useState(initialData?.estimatedAge?.toString() || "");
   const [acquisitionDate, setAcquisitionDate] = useState(initialData?.acquisitionDate || "");
@@ -50,17 +49,17 @@ export function BonsaiForm({ initialData }: Props) {
   const [potColorMaterial, setPotColorMaterial] = useState(initialData?.potColorMaterial || "");
   const [lastRepottingDate, setLastRepottingDate] = useState(initialData?.lastRepottingDate || "");
   const [nextRepottingDate, setNextRepottingDate] = useState(initialData?.nextRepottingDate || "");
-  const [substrateMix, setSubstrateMix] = useState<SubstrateComponent[]>(initialData?.substrateMix || []);
+  const [substrateMix, _setSubstrateMix] = useState<SubstrateComponent[]>(initialData?.substrateMix || []); void _setSubstrateMix;
   const [heightCm, setHeightCm] = useState(initialData?.heightCm?.toString() || "");
   const [trunkDiameterCm, setTrunkDiameterCm] = useState(initialData?.trunkDiameterCm?.toString() || "");
-  const [canopyWidthCm, setCanopyWidthCm] = useState(initialData?.canopyWidthCm?.toString() || "");
+  const [canopyWidthCm, _setCanopyWidthCm] = useState(initialData?.canopyWidthCm?.toString() || ""); void _setCanopyWidthCm;
   const [healthStatus, setHealthStatus] = useState<HealthStatus>(initialData?.healthStatus || "healthy");
-  const [location, setLocation] = useState<Loc>(initialData?.location || "outdoor");
+  const [location, _setLocation] = useState<Loc>(initialData?.location || "outdoor"); void _setLocation;
   const [sunExposure, setSunExposure] = useState<SunExposure>(initialData?.sunExposure || "full");
   const [pestsAndDiseases, setPestsAndDiseases] = useState(initialData?.pestsAndDiseases || "");
   const [lastPruningDate, setLastPruningDate] = useState(initialData?.lastPruningDate || "");
   const [lastWiringDate, setLastWiringDate] = useState(initialData?.lastWiringDate || "");
-  const [nextPlannedWork, setNextPlannedWork] = useState(initialData?.nextPlannedWork || "");
+  const [nextPlannedWork, _setNextPlannedWork] = useState(initialData?.nextPlannedWork || ""); void _setNextPlannedWork;
   const [nextPlannedWorkDate, setNextPlannedWorkDate] = useState(initialData?.nextPlannedWorkDate || "");
   const [notes, setNotes] = useState(initialData?.notes || "");
   const [saving, setSaving] = useState(false);

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { doc, setDoc, updateDoc, deleteDoc, onSnapshot, collection, query, where, getDocs, writeBatch } from "firebase/firestore";
+import { doc, setDoc, updateDoc, onSnapshot, collection, query, where, getDocs, writeBatch } from "firebase/firestore";
 import { nanoid } from "nanoid";
 import { firestore } from "../db/firebase";
 import type { Bonsai } from "../types/bonsai";
